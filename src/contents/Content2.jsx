@@ -6,7 +6,14 @@ const StyleToolbar = styled(Box)(({ theme }) => ({
   display: "flex",
   padding: "58px 58px",
   backgroundColor: "#FFFFFF",
-  gap:"80px"
+  gap:"80px",
+  [theme.breakpoints.down('md')]:{
+    padding: "58px 20px",
+  },
+  [theme.breakpoints.down('sm')]:{
+    flexDirection:"column",
+    padding: "58px 10px",
+  }
 }));
 const Content2 = () => {
   return (

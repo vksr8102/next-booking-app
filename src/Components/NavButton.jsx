@@ -12,6 +12,7 @@ import {
   } from "@mui/material";
   import React from "react";
   import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Link from "next/link";
   const CustomButton = styled(Toolbar)(({theme }) => ({
    display: 'flex',
   justifyContent:"center",
@@ -130,11 +131,14 @@ import {
             "&:hover .MuiSvgIcon-root": { transform: "rotate(180deg)" },
           }}
         >
+           <Link href={"/dining"} style={{textDecoration:"none",color:"#000",}}>
           <Box sx={{height:"60px",display:"flex",alignItems:"center",padding:"0px 20px",borderRight:"1px solid #CCCCCC","&:hover":{ backgroundColor:"#000",color:"#fff",}}} >
-          <Typography >
+           
+          <Typography  >
           Dining& Bars
           </Typography>
           </Box>
+          </Link>
         </MoreButton>
         <MoreButton
           sx={{
@@ -146,7 +150,7 @@ import {
         >
           <Box sx={{height:"60px",display:"flex",alignItems:"center",padding:"0px 20px",borderRight:"1px solid #CCCCCC","&:hover":{ backgroundColor:"#000",color:"#fff",}}} >
           <Typography >
-          Wellness & SPA
+          Meetings & Events
           </Typography>
           <Badge><ExpandMoreIcon/></Badge>
           </Box>
@@ -185,12 +189,14 @@ import {
             "&:hover .MuiBox-root": { display: "flex" },
             "&:hover .MuiSvgIcon-root": { transform: "rotate(180deg)" },
           }}
-        >
+        > 
+          <Link href={"/spa"} style={{textDecoration:"none",color:"#000"}}>
           <Box sx={{height:"60px",display:"flex",alignItems:"center",padding:"0px 20px",borderRight:"1px solid #CCCCCC","&:hover":{ backgroundColor:"#000",color:"#fff",}}} >
           <Typography >
-          Meetings & Events
+          Wellness & SPA
           </Typography>
           </Box>
+          </Link>
         </MoreButton>
         <MoreButton
           sx={{
@@ -241,9 +247,11 @@ import {
           }}
         >
           <Box sx={{height:"60px",display:"flex",alignItems:"center",padding:"0px 20px","&:hover":{ backgroundColor:"#000",color:"#fff",}}} >
+          <Link href={"/contact"} style={{textDecoration:"none",color:"#000"}}>
           <Typography >
           Contact
           </Typography>
+          </Link>
           </Box>
         </MoreButton>
         
